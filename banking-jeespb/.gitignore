@@ -1,0 +1,11 @@
+eurekaserver/.idea/
+eurekaserver/target/
+*.iml
+databaseservice/.idea/
+databaseservice/target/
+loginservice/.idea/
+loginservice/target/
+logoffservice/.idea/
+logoffservice/target/
+.idea/
+accountservice/target/

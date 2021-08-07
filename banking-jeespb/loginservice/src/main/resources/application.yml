@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: loginservice
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka_uri:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+
+microservices:
+  databaseService:
+    authentication: http://databaseservice/domain/user/authentication
+    loginDetails: http://databaseservice/domain/user/updateLoginDetails

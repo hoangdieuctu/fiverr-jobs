@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+data:
+  generator:
+    enabled: true
+
+spring:
+  application:
+    name: databaseservice
+  datasource:
+    url: jdbc:h2:mem:jeespb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: pw
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka_uri:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true

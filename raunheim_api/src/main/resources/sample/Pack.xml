@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <ID>23423</ID>
+    <PKKONZ>GG1</PKKONZ>
+    <PKFIRM>000</PKFIRM>
+    <PKAPN>4712</PKAPN>
+    <PKANR1>23423</PKANR1>
+    <PKPALN>23423</PKPALN>
+    <PKPKNR>232452</PKPKNR>
+    <PKPPLA>234Z-323</PKPPLA>
+    <PackageLines>
+        <PackageLine>
+            <PKAPPO>1</PKAPPO>
+            <PKIDEN>4711</PKIDEN>
+            <PKPMEN>15.000</PKPMEN>
+            <PKME>STK</PKME>
+            <PKDTPS>20200919</PKDTPS>
+            <PKTIPS>123000</PKTIPS>
+            <PKDTPE>20200919</PKDTPE>
+            <PKTIPE>124000</PKTIPE>
+            <PKLFDN>3456</PKLFDN>
+            <PKUSER>215</PKUSER>
+        </PackageLine>
+    </PackageLines>
+</Package>

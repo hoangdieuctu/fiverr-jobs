@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: accountservice
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka_uri:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+
+microservices:
+  databaseService:
+    session: http://databaseservice/domain/user/session
+    accountInfo: http://databaseservice/domain/user/accountInfo?username=%s
+    transactions: http://databaseservice/domain/user/transactions?accountNumber=%s
+    rewards: http://databaseservice/domain/user/rewards?username=%s

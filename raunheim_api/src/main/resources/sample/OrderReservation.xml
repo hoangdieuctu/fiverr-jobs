@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order>
+    <ID>23423</ID>
+    <REKONZ>GG1</REKONZ>
+    <REFIRM>002</REFIRM>
+    <REAPN>4712</REAPN>
+    <REANR1>23423</REANR1>
+    <AKDTB>20200918</AKDTB>
+    <AKTIB>123000</AKTIB>
+    <RETOUR>23423</RETOUR>
+    <REMDE3>22</REMDE3>
+    <REPRN>CZZ</REPRN>
+    <AKVART>23423</AKVART>
+    <Orderlines>
+        <Orderline>
+            <REIDEN>4711</REIDEN>
+            <REAPPO>1</REAPPO>
+            <RERESM>15.000</RERESM>
+            <REPRNR>341234-23</REPRNR>
+            <RESRN>1</RESRN>
+            <REWAKZ>XYZ</REWAKZ>
+            <REORT>EUP</REORT>
+            <REBER>01</REBER>
+            <REREG>10</REREG>
+            <REHOR>10</REHOR>
+            <REVER>20</REVER>
+        </Orderline>
+        <Orderline>
+            <REIDEN>4712</REIDEN>
+            <REAPPO>5</REAPPO>
+            <RERESM>55.000</RERESM>
+            <REPRNR>341234-24</REPRNR>
+            <RESRN>1</RESRN>
+            <REWAKZ>XYZ</REWAKZ>
+            <REORT>EUP</REORT>
+            <REBER>01</REBER>
+            <REREG>10</REREG>
+            <REHOR>10</REHOR>
+            <REVER>30</REVER>
+        </Orderline>
+    </Orderlines>
+</Order>
+

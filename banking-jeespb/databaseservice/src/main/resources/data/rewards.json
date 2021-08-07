@@ -1,0 +1,18 @@
+[
+  {
+    "username": "abc@xyz.com",
+    "rewardsAccountId": "12341234",
+    "rewardsBalance": "500",
+    "rewardsType": "ANNUAL",
+    "rewardsRedeemStatus": "AVAILABLE",
+    "rewardsExpiry": "7/10/2020"
+  },
+  {
+    "username": "cast_123",
+    "rewardsAccountId": "897645612",
+    "rewardsBalance": "400",
+    "rewardsType": "ANNUAL",
+    "rewardsRedeemStatus": "UNAVAILABLE",
+    "rewardsExpiry": "7/10/2020"
+  }
+]

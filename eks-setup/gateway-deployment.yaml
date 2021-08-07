@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gateway
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /foo
+          backend:
+            serviceName: service1
+            servicePort: 80
+        - path: /bar
+          backend:
+            serviceName: service2
+            servicePort: 80

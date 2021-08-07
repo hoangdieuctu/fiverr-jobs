@@ -1,0 +1,30 @@
+server:
+  port: 8082
+
+swagger:
+  hosts: https://los-ggx01-apilfs.hegele.de
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/los_live
+    username: postgres
+    password: postgres123
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+
+storage:
+  location:
+    articles: data/articles
+    bins: data/bins
+    stocks: data/stocks
+    orders:
+      create: data/orders/create
+      delete: data/orders/delete
+      pick: data/orders/pick
+      pack: data/orders/pack
+    reservations:
+      create: data/reservations/create
+      delete: data/reservations/delete
+      release: data/reservations/release

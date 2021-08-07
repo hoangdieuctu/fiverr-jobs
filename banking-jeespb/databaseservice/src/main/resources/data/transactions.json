@@ -1,0 +1,18 @@
+[
+  {
+    "accountNumber": "12341234",
+    "transactionDate": "4/7/2020",
+    "transactionAmount": "1000",
+    "transactionCurrency": "USD",
+    "transactionStatus": "POSTED",
+    "transactionDescription": "Payment towards house rent"
+  },
+  {
+    "accountNumber": "897645612",
+    "transactionDate": "4/7/2020",
+    "transactionAmount": "230",
+    "transactionCurrency": "USD",
+    "transactionStatus": "PENDING",
+    "transactionDescription": "Payment towards groceries"
+  }
+]

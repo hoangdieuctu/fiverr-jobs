@@ -1,0 +1,11 @@
+server:
+  port: 18082
+
+swagger:
+  hosts: http://localhost:18082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/los_test
+    username: postgres
+    password: admin

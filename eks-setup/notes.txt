@@ -1,0 +1,70 @@
+Document: https://en.sokube.ch/post/aws-kubernetes-aws-elastic-kubernetes-service-eks-1?fbclid=IwAR0-8LQOoCKHL4BHh79wWWKuQ4R5TcS1CI018iYP9y0TvwraM2_DteNuqyQ
+
+CloudFormation file: https://github.com/sokube/aws-eks/blob/master/infrastructure-as-code/eks-cloudformation.yaml
+
+Deletion: https://github.com/sokube/aws-eks/tree/master/infrastructure-as-code#resources-destruction
+
+Install docker to EC2
+https://stackoverflow.com/questions/60690568/unable-to-install-docker-on-aws-linux-ami
+```
+sudo amazon-linux-extras install docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+```
+
+Install git to EC2
+```
+sudo yum install git -y
+```
+
+Gateway
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+
+==== Commands ====
+== Describe cluster ==
+eksctl utils describe-stacks --region=ap-southeast-1 --cluster=eks-fiverr
+
+== Enable cloudwatch log ==
+eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=ap-southeast-1 --cluster=eks-fiverr
+
+==== Deploy your service ====
+- Build jar file
+- Dockerize your application
+
+- Upload to ECR (need to create ecr repository first)
+aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 088145138244.dkr.ecr.ap-southeast-1.amazonaws.com
+docker tag service1 088145138244.dkr.ecr.ap-southeast-1.amazonaws.com/service1
+docker push 088145138244.dkr.ecr.ap-southeast-1.amazonaws.com/service1:latest
+
+
+==== Steps ====
+- Install eksctl: https://eksctl.io/
+Make sure you have correct AWS credentials configuration
+
+- Create cluster using eksctl
+eksctl create clsuter -f cluster.yaml
+
+- Install kubernetes dashboard
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+
+- Update proxy port for kubernetes dashboard
+kubectl proxy --port=8080 --address=0.0.0.0 --disable-filter=true &
+
+- Open kubernetes login page
+/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+
+- Get token
+aws eks get-token --cluster-name eks-fiverr | jq -r '.status.token'
+
+- Setup mandatory info for ingress
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-0.32.0/deploy/static/provider/aws/deploy.yaml
+
+
+- Delete all stuffs: https://docs.aws.amazon.com/eks/latest/userguide/delete-cluster.html
+```
+kubectl delete -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+kubectl get svc --all-namespaces
+kubectl delete svc <service-name>
+eksctl delete cluster --name <prod>
+
+```

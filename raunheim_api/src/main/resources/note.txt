@@ -1,0 +1,35 @@
+- Should have index for column 'orderline_id' in table 'orderline_reservations'
+
+Demo script
+
+- Validation mandatory fields
+- Store error file with error reasons
+
+/orders/newOrders
+	- status is deleted -> keep the order id
+
+/orders/reservations
+	- order not found -> error
+	- status != unreserved -> error
+	- status = unreserved
+
+/orders/reservations/delete
+	- order not found -> error
+	- status != reserved -> error
+	- status = reserved
+
+/orders/releases
+	- order not found -> error
+	- status != reserved -> error
+	- status = reserved
+
+
+/orders/delete
+	- order not found -> error
+	- status = open -> error
+	- status = reserved
+
+/orders/picks
+	questions:
+		- why we are not validate the current status?
+/orders/packs

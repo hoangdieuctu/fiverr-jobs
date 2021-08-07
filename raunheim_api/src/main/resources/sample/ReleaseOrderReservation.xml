@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order>
+    <ID>23423</ID>
+    <TPKONZ>GG1</TPKONZ>
+    <TPFIRM>000</TPFIRM>
+    <TPPALN>4711</TPPALN>
+    <TPTTYP>23423</TPTTYP>
+    <TPAPN>4712</TPAPN>
+    <TPANR1>23423</TPANR1>
+    <AKDTB>20200919</AKDTB>
+    <AKTIB>123000</AKTIB>
+    <TPMDE3>22</TPMDE3>
+    <TPVART>XRT</TPVART>
+    <AZKOP>XRT</AZKOP>
+    <AZAPN>XRT</AZAPN>
+    <TPPRN>X12341RT</TPPRN>
+    <OrderlineReservations>
+        <OrderlineReservation>
+            <TPNRKS>12341</TPNRKS>
+            <TPIDEN>4711</TPIDEN>
+            <TPAPPO>1</TPAPPO>
+            <TPBMEN>15.000</TPBMEN>
+            <TPME>STK</TPME>
+            <TPPRNR>341234-23</TPPRNR>
+            <TPSRN>4711</TPSRN>
+            <TPWAKZ>XYZ</TPWAKZ>
+            <TPVORT>EUP</TPVORT>
+            <TPVBER>01</TPVBER>
+            <TPVREG>10</TPVREG>
+            <TPVHOR>10</TPVHOR>
+            <TPVVER>20</TPVVER>
+        </OrderlineReservation>
+        <OrderlineReservation>
+            <TPNRKS>12341</TPNRKS>
+            <TPIDEN>4712</TPIDEN>
+            <TPAPPO>5</TPAPPO>
+            <TPBMEN>15.000</TPBMEN>
+            <TPME>STK</TPME>
+            <TPPRNR>341234-23</TPPRNR>
+            <TPSRN>4711</TPSRN>
+            <TPWAKZ>XYZ</TPWAKZ>
+            <TPVORT>EUP</TPVORT>
+            <TPVBER>01</TPVBER>
+            <TPVREG>10</TPVREG>
+            <TPVHOR>10</TPVHOR>
+            <TPVVER>20</TPVVER>
+        </OrderlineReservation>
+    </OrderlineReservations>
+</Order>
+
+
+

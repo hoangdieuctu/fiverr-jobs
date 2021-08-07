@@ -1,0 +1,20 @@
+[
+  {
+    "username": "abc@xyz.com",
+    "accountNumber": "12341234",
+    "accountType": "CHECKING",
+    "accountBranchCode": "2345",
+    "accountBalance": "10098",
+    "accountCurrency": "USD",
+    "accountStatus": "ACTIVE"
+  },
+  {
+    "username": "cast_123",
+    "accountNumber": "897645612",
+    "accountType": "SAVINGS",
+    "accountBranchCode": "2346",
+    "accountBalance": "21345",
+    "accountCurrency": "USD",
+    "accountStatus": "ACTIVE"
+  }
+]

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bins>
+	<ID>1234</ID>
+	<Bin>
+		<CLSTAT>1234</CLSTAT>
+		<LPKONZ>GG1</LPKONZ>
+		<LPFIRM>000</LPFIRM>
+		<LPORT>EUP</LPORT>
+		<LPBER>01</LPBER>
+		<LPREG>0001</LPREG>
+		<LPHOR>001</LPHOR>
+		<LPVER>10</LPVER>
+		<LPABC>A</LPABC>
+		<LPZON>T</LPZON>
+	</Bin>
+</Bins>
