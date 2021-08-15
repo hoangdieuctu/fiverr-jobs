@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9090/eureka
+  instance:
+    preferIpAddress: true
+
+spring:
+  application:
+    name: userservice
+  datasource:
+    url: jdbc:postgresql://localhost:5432/greg
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: admin
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+flyway:
+  user: postgres
+  password: admin
+  url: jdbc:postgresql://localhost:5432/greg

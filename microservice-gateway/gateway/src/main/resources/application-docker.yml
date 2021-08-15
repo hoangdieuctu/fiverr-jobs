@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:9090/eureka
+  instance:
+    preferIpAddress: true
+
+jwt:
+  token:
+    secret-key: BW6TsEkliu
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: authservice
+          uri: lb://authservice
+          predicates:
+            - Path=/auth/**
+
+        - id: ignoreusersearch
+          uri: no://op
+          predicates:
+            - Path=/users/search
+          filters:
+            - SetStatus=403
+
+        - id: userservice
+          uri: lb://userservice
+          predicates:
+            - Path=/users/**
+          filters:
+            - TokenFilter

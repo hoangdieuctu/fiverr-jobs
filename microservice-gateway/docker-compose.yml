@@ -1,0 +1,43 @@
+version: '2.1'
+services:
+  db:
+    image: "postgres"
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=greg
+  eureka:
+    build: ./eurekaserver
+    container_name: eureka
+    ports:
+      - 9090:9090
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9090/eureka/apps" ]
+      interval: 5s
+      timeout: 1s
+      retries: 20
+  gateway:
+    build: ./gateway
+    container_name: gateway
+    depends_on:
+      eureka:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+  userservice:
+    build: ./userservice
+    container_name: userservice
+    depends_on:
+      eureka:
+        condition: service_healthy
+    ports:
+      - 8081:8081
+  authservice:
+    build: ./authservice
+    container_name: authservice
+    depends_on:
+      eureka:
+        condition: service_healthy
+    ports:
+      - 8082:8082
