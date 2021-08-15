@@ -1,0 +1,4 @@
+userservice/.idea/
+userservice/target/
+*.iml
+user-app/.idea/
